@@ -1,0 +1,2 @@
+# HCNetSDK_For_Delphi
+这是从海康威视(Hikvision)设备网络SDK(V6.1.9.48_build20230410)的C语言头文件HCNetSDK.h全部转换而来的Delphi版本接口声明（HCNetSDK.pas），使用本人自己开发的一个专用转换程序转换而来，可供使用Delphi开发海康威视设备的相关应用。本人仅在Window平台中用Delphi 10.3.3部分测试和部分使用过这个HCNetSDK.pas，并没有进行过详细的测试
