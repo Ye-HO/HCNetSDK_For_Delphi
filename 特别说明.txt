@@ -1,0 +1,7 @@
+1. 请到www.hikvision.com下载海康威视sdk（主页->服务支持->技术支持->SDK下载）
+
+2. 使用了延迟加载函数方式,例如function NET_DVR_Init(): BOOL; stdcall; external DLLFILENAME Delayed;
+    以实现函数加载前, 把.\DLL(SDK目录)这个路径动态添加到Path环境变量中, 使得程序能搜索到这个目录.
+    目的是把SDK放在EXE文件所在目录的子目录, 避免把EXE文件和SDK的DLL文件混在一起
+
+3. 目录结构如图片文件"把SDK文件放在EXE文件所在目录的子目录DLL上.PNG"所示
