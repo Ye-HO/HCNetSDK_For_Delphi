@@ -3,8 +3,8 @@ program RealTimePlayer;
 uses
   Vcl.Forms,
   uMain in 'uMain.pas' {MainForm},
-  HCNetSDK in '..\Source\SDK\HCNetSDK.pas',
-  uNVR in 'uNVR.pas';
+  uNVR in 'uNVR.pas',
+  HCNetSDK in '..\HCNetSDK.pas';
 
 {$R *.res}
 

@@ -129,8 +129,8 @@
             <Form>MainForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\Source\SDK\HCNetSDK.pas"/>
         <DCCReference Include="uNVR.pas"/>
+        <DCCReference Include="..\HCNetSDK.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -158,6 +158,12 @@
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="RealTimePlayer.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>RealTimePlayer.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="RealTimePlayer.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>RealTimePlayer.exe</RemoteName>
                         <Overwrite>true</Overwrite>

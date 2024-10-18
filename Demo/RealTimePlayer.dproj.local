@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899-12-30 00:00:00.000.841,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.dfm=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uMain.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.954,D:\Programing\Delphi 10\Default_Project\Unit1.dfm=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.118,=D:\Programing\Delphi 10\Default_Project\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.954,D:\Programing\Delphi 10\Default_Project\Unit1.pas=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.841,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.pas=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uMain.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.579,=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uDVR_HK.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.002,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uDVR_HK.pas=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uNVR.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.582,D:\Programing\Delphi 10\Default_Project\Project1.dproj=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Preview.dproj</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.482,=D:\Programing\Delphi 10\DvrMonitor_Local\Source\SDK\HCNetSDK.pas</Transaction>
-    <Transaction>2024-10-18 17:29:56.470,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\RealTimePlayer.dproj=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Preview.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.002,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uNVR.pas=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uDVR_HK.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.582,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Preview.dproj=D:\Programing\Delphi 10\Default_Project\Project1.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.470,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Preview.dproj=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\RealTimePlayer.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.841,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uMain.dfm=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.118,=D:\Programing\Delphi 10\Default_Project\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.954,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.dfm=D:\Programing\Delphi 10\Default_Project\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.579,=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uDVR_HK.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.482,=D:\Programing\Delphi 10\DvrMonitor_Local\Source\SDK\HCNetSDK.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.954,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.pas=D:\Programing\Delphi 10\Default_Project\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.841,D:\Programing\Delphi 10\DvrMonitor_Local\Demo\uMain.pas=D:\Programing\Delphi 10\DvrMonitor_Local\Demo\Unit1.pas</Transaction>
+    <Transaction>2024/10/18 23:31:10.907,=D:\Programing\Git\HCNetSDK.pas</Transaction>
   </Transactions>
 </BorlandProject>
