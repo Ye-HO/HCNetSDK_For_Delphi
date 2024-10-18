@@ -1,0 +1,23 @@
+2024/10/18  23:54    <DIR>          .
+2024/10/18  23:54    <DIR>          ..
+2023/04/12  13:44           499,712 AnalyzeData.dll
+2023/04/12  13:44         2,054,144 AudioIntercom.dll
+2023/04/12  13:44           150,528 AudioRender.dll
+2023/04/12  14:03           877,056 HCAlarm.dll
+2023/04/12  14:03            13,180 HCAlarm.lib
+2023/04/12  14:02           905,728 HCCoreDevCfg.dll
+2023/04/12  14:03           855,552 HCDisplay.dll
+2023/04/12  14:03         1,362,432 HCGeneralCfgMgr.dll
+2023/04/12  14:03            47,076 HCGeneralCfgMgr.lib
+2023/04/12  14:03         1,057,792 HCIndustry.dll
+2023/04/12  14:03           748,032 HCPlayBack.dll
+2023/04/12  14:02           686,080 HCPreview.dll
+2023/04/12  14:02            40,044 HCPreview.lib
+2023/04/12  14:02           689,152 HCVoiceTalk.dll
+2023/04/12  13:44           978,432 libiconv2.dll
+2023/04/12  13:44           655,872 msvcr90.dll
+2023/04/12  13:44           375,808 OpenAL32.dll
+2023/04/12  13:44           722,432 StreamTransClient.dll
+2023/04/12  13:44           720,896 SystemTransform.dll
+              19 个文件     13,439,948 字节
+               2 个目录 139,548,020,736 可用字节
