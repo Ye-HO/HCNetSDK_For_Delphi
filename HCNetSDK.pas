@@ -1,17 +1,21 @@
 unit HCNetSDK;
 
 interface
+{$IF Defined(WIN64) OR Defined(POSIX64)}
+  {$A8}  //WIN64采用8字节对齐
+{$ELSE}
+  {$A4}  //WIN32采用4字节对齐
+{$ENDIF}
 
-{$A4}  //struct采用4字节对齐
-{$Z4}  //enum  采用4字节对齐
+{$Z4}  //enum采用4字节对齐
 
 uses Windows;
 
-//SDK版本: CH-HCNetSDKV6.1.9.48_build20230410_win32
-//下载地址: https://open.hikvision.com/fileserver/filesonline/CH-HCNetSDKV6.1.9.48_build20230410_win32_20230602165100.zip
+//Win32_SDK下载地址: https://open.hikvision.com/fileserver/filesonline/CH-HCNetSDKV6.1.9.48_build20230410_win32_20241210170447.zip
+//Win64_SDK下载地址: https://open.hikvision.com/fileserver/filesonline/CH-HCNetSDKV6.1.9.48_build20230410_win64_20241210170522.zip
 
 const
-  DLLPATH = '.\DLL'; //要把海康威视的SDK放在此目录. 如果想放到其它目录, 需要修改此值
+  DLLPATH = '.\DLL';   //把海康威视的SDK放在此目录. 如果想放到其它目录, 需要修改此值
   DLLFILENAME = 'HCNetSDK.dll';
 
 //使用延迟加载函数方式,例如function NET_DVR_Init(): BOOL; stdcall; external DLLFILENAME Delayed;
@@ -1991,7 +1995,7 @@ const
   NET_DVR_EZVIZ_P2P_REGISTER_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 1);    
   NET_DVR_EZVIZ_P2P_LOGIN_2C_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 2);    
   NET_DVR_EZVIZ_P2P_LOGIN_2B_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 3);    
-  NET_DVR_EZVIZ_P2P_BUILDLINK_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 4);    
+  NET_DVR_EZVIZ_P2P_BUILDLINK_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 4);
   NET_DVR_EZVIZ_P2P_PORTMAPPING_ERROR = (NET_EZVIZ_P2P_BASE_INDEX + 5);    
   NET_DVR_EZVIZ_P2P_COULDNT_RESOLVE_HOST = (NET_EZVIZ_P2P_BASE_INDEX + 6);    //P2PCLOUD_ER_COULDNT_RESOLVE_HOST    1006
   NET_DVR_EZVIZ_P2P_COULDNT_CONNECT = (NET_EZVIZ_P2P_BASE_INDEX + 7);    //P2PCLOUD_ER_COULDNT_CONNECT 1007
@@ -2099,7 +2103,7 @@ const
   UP_RIGHT = 26;    // 云台以SS的速度上仰和右转 
   DOWN_LEFT = 27;    // 云台以SS的速度下俯和左转 
   DOWN_RIGHT = 28;    // 云台以SS的速度下俯和右转 
-  PAN_AUTO = 29;    // 云台以SS的速度左右自动扫描 
+  PAN_AUTO = 29;    // 云台以SS的速度左右自动扫描
 
 const
   FILL_PRE_SEQ = 30;    // 将预置点加入巡航序列 
@@ -2243,7 +2247,7 @@ const
   KEY_CODE_F1 = 27;    
   KEY_CODE_F2 = 28;    
 
-// for PTZ control 
+// for PTZ control
 const
   KEY_PTZ_UP_START = KEY_CODE_UP;    
   KEY_PTZ_UP_STOP = 32;    
@@ -2459,7 +2463,7 @@ const
   NET_DVR_SET_EMAILCFG = 229;    //设置网络应用参数 EMAIL
 
 const
-  NET_DVR_GET_NFSCFG = 230;    // NFS disk config 
+  NET_DVR_GET_NFSCFG = 230;    // NFS disk config
   NET_DVR_SET_NFSCFG = 231;    // NFS disk config 
 
 {注：该命令为定制，只支持8条OSD的类型，不会兼容V30设备版本之前的
@@ -2603,7 +2607,7 @@ const
 
 //异常结构参数 (NET_DVR_EXCEPTION_V30结构)
 const
-  NET_DVR_GET_EXCEPTIONCFG_V30 = 1034;    
+  NET_DVR_GET_EXCEPTIONCFG_V30 = 1034;
   NET_DVR_SET_EXCEPTIONCFG_V30 = 1035;    
 
 //串口232结构参数 (NET_DVR_RS232CFG_V30结构)
@@ -43974,7 +43978,7 @@ type
   LPNET_DVR_AREA_ZOOM_CFG = ^NET_DVR_AREA_ZOOM_CFG;
 
 type
-  NET_DVR_SCREEN_CONTROL_PARAM = record 
+  NET_DVR_SCREEN_CONTROL_PARAM = record
     case Byte of
     0: (struInputCtrl: NET_DVR_INPUT_INTERFACE_CTRL);  
     1: (struDisplayCtrl: NET_DVR_DISPLAY_COLOR_CTRL);  
@@ -44190,7 +44194,7 @@ type
 
 type
   NET_DVR_DELAY_TIME = record 
-    dwSize: DWORD;  
+    dwSize: DWORD;
     dwDelayTime: DWORD;  //延时时间，0-3000，单位：ms
     byRes: array[0..32-1] of BYTE;  
   end;
@@ -44262,7 +44266,7 @@ type
 
 //样本标定结构体
 type
-  NET_DVR_BV_SAMPLE_CALIBRATION = record 
+  NET_DVR_BV_SAMPLE_CALIBRATION = record
     dwSize: DWORD;  //结构体大小
     dwChannel: DWORD;  //通道号
     byCommand: BYTE;  //标定命令，参见BV_SAMPLE_CALIB_CMD _ENUM
@@ -44622,7 +44626,7 @@ type
     dwSize: DWORD;  
     byFuncType: BYTE;  //0-Pos功能
     Res1: array[0..3-1] of BYTE;  
-    struPosInfo: NET_DVR_POS_HIDDEN_INFORMATION;  
+    struPosInfo: NET_DVR_POS_HIDDEN_INFORMATION;
     byRes: array[0..1024-1] of BYTE;  
   end;
   LPNET_DVR_HIDDEN_INFORMATION_CFG = ^NET_DVR_HIDDEN_INFORMATION_CFG;
@@ -44658,7 +44662,7 @@ type
   NET_DVR_RAPIDMOVE_DETECTION = record 
     dwSize: DWORD;  //结构体大小
     byEnabled: BYTE;  //是否使能：0- 否，1- 是
-    byRes1: array[0..3-1] of BYTE;  
+    byRes1: array[0..3-1] of BYTE;
     struRegion: array[0..MAX_REGION_NUM-1] of NET_DVR_RAPIDMOVE_REGION;  
     byRes2: array[0..128-1] of BYTE;  
   end;
@@ -44730,7 +44734,7 @@ type
     dwSize: DWORD;  
     dwChannel: DWORD;  //通道号
     dwStreamType: DWORD;  //码流类型：0- 主码流，1- 子码流，2- 第三码流
-    byRes: array[0..8-1] of BYTE;  
+    byRes: array[0..8-1] of BYTE;
   end;
   LPNET_DVR_REGION_CLIP_COND = ^NET_DVR_REGION_CLIP_COND;
 
@@ -44802,7 +44806,7 @@ type
   LPNET_DVR_WIRELESSDIAL_STATUS = ^NET_DVR_WIRELESSDIAL_STATUS;
 
 type
-  NET_DVR_WIRELESSDIAL_CONNECT_PARAM = record 
+  NET_DVR_WIRELESSDIAL_CONNECT_PARAM = record
     dwSize: DWORD;  //结构体大小
     dwInterface: DWORD;  //网卡编号，1,2……
     byEnableConnect: BYTE;  //是否连网，0-断网，1-连网
@@ -44923,7 +44927,7 @@ type
   LPNET_DVR_XML_CONFIG_INPUT = ^NET_DVR_XML_CONFIG_INPUT;
 
 type
-  NET_DVR_XML_CONFIG_OUTPUT = record 
+  NET_DVR_XML_CONFIG_OUTPUT = record
     dwSize: DWORD;  //结构体大小
     lpOutBuffer: PVOID;  //输出参数缓冲区，XML格式
     dwOutBufferSize: DWORD;  //输出参数缓冲区大小(内存大小)
@@ -44934,7 +44938,7 @@ type
     lpDataBuffer: PVOID;  //当byNumOfMultiPart>0时，配合报文结构体使用，存放透传数据内容，通过NET_DVR_MIME_UNIT的dwContentLen偏移访问
 {$ELSE}
     lpDataBuffer: PVOID;  //当byNumOfMultiPart>0时，配合报文结构体使用，存放透传数据内容，通过NET_DVR_MIME_UNIT的dwContentLen偏移访问
-    byRes2: array[0..4-1] of BYTE;  
+    byRes2: array[0..4-1] of BYTE;
 {$ENDIF}
     byNumOfMultiPart: BYTE;  //0-无效。 其他值表示报文分段个数，非零时lpInBuffer传入的是NET_DVR_MIME_UNIT结构体数组的指针，该值即代表结构体个数。
     byRes: array[0..23-1] of BYTE;  
